@@ -1,0 +1,450 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="自然によってひらき、対話によって還る。屋久島3泊4日の少人数リトリート。">
+<title>自分に還る、という旅。｜屋久島 3泊4日 Retreat</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;600&family=Noto+Serif+JP:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root {
+  --ink:#16211c;
+  --forest:#1f3b2f;
+  --deep:#112219;
+  --moss:#8a9b78;
+  --mist:#f2f3ee;
+  --sand:#ece8dc;
+  --paper:#faf9f4;
+  --ember:#b8683a;
+  --line:rgba(22,33,28,.18);
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0;
+  color:var(--ink);
+  background:var(--paper);
+  font-family:"Noto Sans JP",sans-serif;
+  font-weight:300;
+  line-height:2;
+  letter-spacing:.045em;
+}
+a{color:inherit}
+img{display:block;width:100%;height:100%;object-fit:cover}
+.serif{font-family:"Noto Serif JP",serif}
+.wrap{width:min(1100px,calc(100% - 48px));margin:auto}
+.eyebrow{
+  font-size:12px;letter-spacing:.22em;text-transform:uppercase;font-weight:600;
+  display:flex;align-items:center;gap:14px;margin-bottom:22px;
+}
+.eyebrow:before{content:"";width:42px;height:1px;background:currentColor;opacity:.55}
+h1,h2,h3,p{margin-top:0}
+h2{
+  font-family:"Noto Serif JP",serif;
+  font-weight:500;line-height:1.55;letter-spacing:.055em;
+  font-size:clamp(34px,5vw,62px);margin-bottom:34px;
+}
+.lead{font-family:"Noto Serif JP",serif;font-size:clamp(20px,2.5vw,30px);line-height:1.85}
+.small{font-size:13px;line-height:1.8;opacity:.72}
+.btn{
+  display:inline-flex;align-items:center;justify-content:center;gap:14px;
+  padding:18px 30px;border:1px solid currentColor;text-decoration:none;
+  font-size:13px;font-weight:600;letter-spacing:.12em;transition:.25s ease;
+}
+.btn:hover{background:var(--ink);color:white;border-color:var(--ink)}
+.btn.light:hover{background:white;color:var(--deep);border-color:white}
+.arrow{font-size:18px;transform:translateY(-1px)}
+
+/* HERO */
+.hero{
+  min-height:100svh;position:relative;color:white;display:flex;align-items:flex-end;
+  background-image:
+    linear-gradient(180deg,rgba(5,14,10,.14) 0%,rgba(5,14,10,.24) 36%,rgba(5,14,10,.76) 100%),
+    url('https://images.unsplash.com/photo-1723536524589-1fbfa413fda3?auto=format&fit=crop&fm=jpg&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&ixlib=rb-4.1.0&q=60&w=3000');
+  background-size:cover;background-position:center;
+}
+.hero:after{
+  content:"";position:absolute;inset:0;
+  background:linear-gradient(90deg,rgba(12,25,18,.35),transparent 45%);
+  pointer-events:none;
+}
+.hero-inner{position:relative;z-index:1;padding:96px 0 74px;width:min(1100px,calc(100% - 48px));margin:auto}
+.hero-kicker{font-size:12px;letter-spacing:.28em;font-weight:500;margin-bottom:24px}
+.hero h1{
+  font-family:"Noto Serif JP",serif;font-weight:500;
+  font-size:clamp(48px,8vw,104px);line-height:1.18;letter-spacing:.07em;
+  margin:0 0 28px;max-width:900px;
+}
+.hero-copy{font-family:"Noto Serif JP",serif;font-size:clamp(18px,2vw,25px);line-height:1.8;max-width:680px;margin-bottom:42px}
+.hero-meta{display:flex;gap:28px;flex-wrap:wrap;font-size:12px;letter-spacing:.1em;opacity:.86}
+.scrollmark{position:absolute;right:32px;bottom:34px;z-index:2;font-size:10px;letter-spacing:.28em;writing-mode:vertical-rl}
+.scrollmark:after{content:"";display:block;width:1px;height:60px;background:white;margin:16px auto 0;opacity:.6}
+
+/* INTRO */
+.intro{padding:150px 0 160px}
+.intro-grid{display:grid;grid-template-columns:1fr 1.1fr;gap:120px;align-items:start}
+.intro-copy p{margin-bottom:28px}
+.big-quote{
+  font-family:"Noto Serif JP",serif;font-size:clamp(28px,4vw,50px);
+  line-height:1.65;border-left:1px solid var(--ink);padding-left:34px;
+}
+.big-quote span{display:block;font-size:13px;font-family:"Noto Sans JP",sans-serif;margin-top:22px;letter-spacing:.12em;opacity:.55}
+
+/* FULL IMAGE */
+.full-image{height:min(74vw,760px);min-height:500px;position:relative}
+.full-image img{filter:saturate(.84)}
+.full-image .caption{
+  position:absolute;bottom:22px;right:28px;color:white;font-size:10px;letter-spacing:.12em;
+  text-shadow:0 1px 12px rgba(0,0,0,.5)
+}
+
+/* PHILOSOPHY */
+.philosophy{background:var(--forest);color:#f6f5ef;padding:150px 0}
+.phi-grid{display:grid;grid-template-columns:.82fr 1.18fr;gap:110px}
+.phi-number{font-family:"Noto Serif JP",serif;font-size:120px;line-height:1;opacity:.12}
+.phi-copy p{margin-bottom:30px;color:rgba(255,255,255,.82)}
+.statement{
+  font-family:"Noto Serif JP",serif;font-size:clamp(26px,4vw,46px);
+  line-height:1.65;margin:62px 0 0;max-width:850px;
+}
+
+/* GUIDES */
+.guides{padding:160px 0;background:var(--sand)}
+.guides-head{max-width:760px;margin-bottom:86px}
+.guide-row{
+  display:grid;grid-template-columns:1fr 1fr;gap:1px;background:rgba(22,33,28,.28);
+  border-top:1px solid rgba(22,33,28,.28);border-bottom:1px solid rgba(22,33,28,.28);
+}
+.guide{
+  background:var(--sand);padding:64px 58px 70px;
+}
+.guide + .guide{border-left:0}
+.guide-role{font-size:11px;letter-spacing:.2em;font-weight:600;margin-bottom:40px}
+.guide h3{font-family:"Noto Serif JP",serif;font-size:34px;font-weight:500;margin-bottom:8px}
+.guide-sub{font-size:12px;opacity:.65;margin-bottom:30px}
+.guide p{font-size:14px;line-height:2.05}
+.guide-axis{font-family:"Noto Serif JP",serif;font-size:22px;margin-top:34px;padding-top:28px;border-top:1px solid var(--line)}
+
+/* THREE */
+.three{padding:150px 0}
+.three-head{display:grid;grid-template-columns:.8fr 1.2fr;gap:80px;margin-bottom:90px}
+.three-list{border-top:1px solid var(--line)}
+.three-item{display:grid;grid-template-columns:120px .65fr 1.35fr;gap:30px;padding:52px 0;border-bottom:1px solid var(--line);align-items:start}
+.three-num{font-family:"Noto Serif JP",serif;font-size:48px;opacity:.32}
+.three-title{font-family:"Noto Serif JP",serif;font-size:28px}
+.three-item p{font-size:14px;margin:0;max-width:560px}
+
+/* FIRE */
+.fire{
+  min-height:720px;color:white;display:flex;align-items:center;position:relative;overflow:hidden;
+  background:
+    radial-gradient(circle at 50% 78%,rgba(214,104,48,.62) 0 3%,rgba(141,58,30,.3) 12%,transparent 33%),
+    radial-gradient(circle at 48% 75%,rgba(252,202,120,.18),transparent 18%),
+    linear-gradient(180deg,#132219 0%,#0e1712 58%,#080b09 100%);
+}
+.fire:before{
+  content:"";position:absolute;left:50%;bottom:110px;transform:translateX(-50%);
+  width:170px;height:250px;background:linear-gradient(180deg,#efc26a 0%,#c66634 48%,rgba(183,76,37,0) 100%);
+  clip-path:polygon(50% 0,64% 25%,89% 47%,74% 71%,100% 100%,50% 88%,0 100%,22% 67%,10% 44%,36% 27%);
+  filter:blur(16px);opacity:.56;
+}
+.fire-inner{position:relative;z-index:1;text-align:center;width:min(800px,calc(100% - 48px));margin:auto}
+.fire .eyebrow{justify-content:center}
+.fire .eyebrow:before{display:none}
+.fire h2{font-size:clamp(35px,5vw,62px)}
+.fire p{max-width:680px;margin:0 auto 22px;color:rgba(255,255,255,.78)}
+
+/* JOURNEY */
+.journey{padding:160px 0;background:var(--mist)}
+.journey-head{max-width:780px;margin-bottom:80px}
+.day{display:grid;grid-template-columns:180px 1fr;gap:70px;padding:56px 0;border-top:1px solid var(--line)}
+.day:last-child{border-bottom:1px solid var(--line)}
+.day-label{font-family:"Noto Serif JP",serif;font-size:20px;letter-spacing:.16em}
+.day h3{font-family:"Noto Serif JP",serif;font-size:34px;font-weight:500;margin-bottom:16px}
+.day p{max-width:670px;margin-bottom:0;font-size:14px}
+.day .note{font-size:11px;letter-spacing:.12em;opacity:.55;margin-top:18px}
+
+/* IMAGE BREAK */
+.image-break{
+  height:70vh;min-height:520px;background:
+  linear-gradient(rgba(10,20,15,.12),rgba(10,20,15,.34)),
+  url('https://images.unsplash.com/photo-1690476072350-be1db216a0b2?auto=format&fit=crop&fm=jpg&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&ixlib=rb-4.1.0&q=60&w=3000') center/cover;
+  display:flex;align-items:center;justify-content:center;color:white;text-align:center;padding:30px;
+}
+.image-break p{font-family:"Noto Serif JP",serif;font-size:clamp(28px,4vw,50px);line-height:1.7;text-shadow:0 2px 16px rgba(0,0,0,.32)}
+
+/* FOR WHO */
+.forwho{padding:150px 0}
+.forwho-grid{display:grid;grid-template-columns:.85fr 1.15fr;gap:110px}
+.forwho ul{list-style:none;padding:0;margin:0;border-top:1px solid var(--line)}
+.forwho li{padding:21px 0;border-bottom:1px solid var(--line);font-family:"Noto Serif JP",serif;font-size:17px}
+.forwho-foot{margin-top:44px;font-family:"Noto Serif JP",serif;font-size:23px}
+
+/* INFO */
+.info{background:var(--deep);color:white;padding:140px 0}
+.info h2{font-size:clamp(34px,4.5vw,56px)}
+.info-grid{display:grid;grid-template-columns:1fr 1fr;gap:80px;margin-top:72px}
+.info dl{margin:0}
+.info-row{display:grid;grid-template-columns:140px 1fr;gap:18px;padding:22px 0;border-top:1px solid rgba(255,255,255,.18)}
+.info-row:last-child{border-bottom:1px solid rgba(255,255,255,.18)}
+.info dt{font-size:11px;letter-spacing:.14em;opacity:.56}
+.info dd{margin:0;font-size:14px}
+.price{font-family:"Noto Serif JP",serif;font-size:clamp(46px,6vw,78px);line-height:1.2;margin-bottom:14px}
+.price small{font-family:"Noto Sans JP",sans-serif;font-size:13px;letter-spacing:.1em}
+.info-note{font-size:12px;opacity:.64;margin:24px 0 38px}
+
+/* FINAL */
+.final{padding:170px 0 190px;text-align:center;background:#f8f6ef}
+.final p{max-width:680px;margin:0 auto 44px}
+.final h2{font-size:clamp(42px,6.6vw,82px);margin-bottom:42px}
+.final .closing{font-family:"Noto Serif JP",serif;font-size:20px;line-height:2.1;margin-bottom:50px}
+footer{padding:32px 24px;text-align:center;font-size:10px;letter-spacing:.12em;opacity:.55;background:#f8f6ef}
+
+.floating{
+  position:fixed;right:20px;bottom:20px;z-index:10;background:rgba(250,249,244,.92);
+  backdrop-filter:blur(12px);border:1px solid rgba(22,33,28,.18);
+  text-decoration:none;padding:14px 18px;font-size:11px;font-weight:600;letter-spacing:.11em;
+  box-shadow:0 8px 32px rgba(10,20,15,.12)
+}
+
+@media(max-width:800px){
+  .wrap{width:min(100% - 34px,1100px)}
+  .hero-inner{width:calc(100% - 34px);padding-bottom:54px}
+  .hero h1{font-size:clamp(42px,14vw,68px)}
+  .hero-meta{gap:10px 20px}
+  .scrollmark{display:none}
+  .intro,.philosophy,.guides,.three,.journey,.forwho,.info,.final{padding:100px 0}
+  .intro-grid,.phi-grid,.three-head,.forwho-grid,.info-grid{grid-template-columns:1fr;gap:54px}
+  .big-quote{padding-left:22px}
+  .phi-number{font-size:86px}
+  .guide-row{grid-template-columns:1fr}
+  .guide{padding:48px 26px}
+  .guide + .guide{border-top:1px solid rgba(22,33,28,.28)}
+  .three-item{grid-template-columns:58px 1fr;gap:20px}
+  .three-item p{grid-column:2}
+  .three-num{font-size:34px}
+  .day{grid-template-columns:1fr;gap:10px;padding:44px 0}
+  .day-label{font-size:14px}
+  .info-row{grid-template-columns:100px 1fr}
+  .fire{min-height:650px}
+  .floating{right:12px;bottom:12px}
+}
+</style>
+</head>
+<body>
+
+<a class="floating" href="#entry">参加概要を見る →</a>
+
+<header class="hero">
+  <div class="hero-inner">
+    <div class="hero-kicker">YAKUSHIMA / 3 NIGHTS 4 DAYS RETREAT</div>
+    <h1>自分に還る、<br>という旅。</h1>
+    <div class="hero-copy">森へ。水へ。火へ。<br>そして、まだ言葉になっていない自分へ。</div>
+    <div class="hero-meta">
+      <span>屋久島 3泊4日</span><span>少人数リトリート</span><span>参加費 98,000円</span>
+    </div>
+  </div>
+  <div class="scrollmark">SCROLL</div>
+</header>
+
+<section class="intro">
+  <div class="wrap intro-grid">
+    <div>
+      <div class="eyebrow">WHY RETREAT</div>
+      <h2>答えを探すことを、<br>一度やめてみる。</h2>
+    </div>
+    <div class="intro-copy">
+      <p>毎日は、思っている以上にたくさんの音でできています。仕事のこと、家族のこと、誰かから期待されていること。これからどうしたらいいのだろう、ということ。</p>
+      <p>だから時々、「私は本当は、どうしたいんだろう」という、とても単純な問いさえ、よくわからなくなる。</p>
+      <p>この4日間は、その答えを一生懸命探すための時間ではありません。むしろ一度、考えることから少し離れて、自然の中で起きることを待ってみる旅です。</p>
+      <div class="big-quote">自然が、余計なものを静かにほどく。<br>対話が、そこで現れたものに言葉を与える。<span>THIS IS THE RETREAT.</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="philosophy">
+  <div class="wrap">
+    <div class="phi-grid">
+      <div>
+        <div class="eyebrow">OUR PHILOSOPHY</div>
+        <div class="phi-number">01</div>
+      </div>
+      <div class="phi-copy">
+        <h2>観光ではなく、<br>屋久島と「出会う」。</h2>
+        <p>屋久島の森には、人間の都合とは違う時間が流れています。何百年、何千年とそこに立つ木。山に降った雨が森を通り、川になり、海へ還っていく水。風、土、苔、鳥の声。</p>
+        <p>人気の場所をいくつ制覇したかではなく、その場所で何を感じ、何に気づき、どんな時間を味わったか。屋久島を知り尽くしたガイドとともに、島との関わりそのものを深くしていきます。</p>
+        <p>そして夜は火を囲みます。話したければ話す。黙っていたければ黙る。答えを急がず、自然の中で動いたものを、必要なときだけ言葉にしていきます。</p>
+      </div>
+    </div>
+    <div class="statement">自然への案内人と、<br>自分自身への案内人。<br><br>二人のガイドと歩く4日間。</div>
+  </div>
+</section>
+
+<section class="guides">
+  <div class="wrap">
+    <div class="guides-head">
+      <div class="eyebrow">TWO GUIDES</div>
+      <h2>外側の自然と、<br>内側の自然へ。</h2>
+      <p>この旅には、異なる領域を案内する二人のプロがいます。一人は屋久島の自然へ。もう一人は、自分の中にあるまだ言葉にならないものへ。</p>
+    </div>
+    <div class="guide-row">
+      <article class="guide">
+        <div class="guide-role">GUIDE FOR NATURE</div>
+        <h3>自然への案内人</h3>
+        <article>笹川 健一</article>
+        <div class="guide-sub">屋久島ガイド巡り葉 代表 / 屋久島公認ガイド</div>
+        <p>屋久島に暮らし、森・山・川・海を案内してきたガイド。「人気の場所をただ訪れる」ことよりも、一人ひとりが自然とどう出会うかを大切にしています。立ち止まること、静かに感じること、予定通りにいかないことまで含めて、その人にしかない“やくしまじかん”をつくります。</p>
+        <div class="guide-axis">感じる。気づく。味わう。<br>そして、自然と戯れる。</div>
+      </article>
+      <article class="guide">
+        <div class="guide-role">GUIDE FOR INNER SELF</div>
+        <h3>対話への案内人</h3>
+        <article>山口真嗣</article>
+        <div class="guide-sub">ライフコーチ / 対人支援者 / 焚火を愛する人</div>
+        <p>その人の中にある、まだうまく言葉になっていない願いや感覚に耳を澄ませるコーチ。答えを教えるのではなく、対話を通じて、その人自身の言葉がひらいていく時間をつくります。この旅では特に、火を囲んで話す“余白のある対話”を担います。</p>
+        <div class="guide-axis">心の奥にある小さな火を、<br>急がず、一緒に見つける。</div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="three">
+  <div class="wrap">
+    <div class="three-head">
+      <div>
+        <div class="eyebrow">THREE EXPERIENCES</div>
+        <h2>この旅で、<br>大切にすること。</h2>
+      </div>
+      <div>
+        <p class="lead">変わるために来なくてもいい。<br>まずは、感じる力を取り戻す。</p>
+        <p>目標設定も、自己分析も、無理にしません。屋久島という環境に身体を置き、普段は聞こえにくくなっている感覚に、もう一度触れていきます。</p>
+      </div>
+    </div>
+    <div class="three-list">
+      <div class="three-item">
+        <div class="three-num">01</div>
+        <div class="three-title">感じる</div>
+        <p>森、水、海、風、土。情報として知っている屋久島ではなく、自分の五感で出会う屋久島へ。「何を見たか」より、そこで何を感じたかを大切にします。</p>
+      </div>
+      <div class="three-item">
+        <div class="three-num">02</div>
+        <div class="three-title">戯れる</div>
+        <p>水に触る。森で寝転ぶ。寄り道する。笑う。ぼんやりする。意味があるからではなく、「なんとなくやりたい」からやってみる。大人が忘れがちな自由さを取り戻します。</p>
+      </div>
+      <div class="three-item">
+        <div class="three-num">03</div>
+        <div class="three-title">ひらく</div>
+        <p>自然の中でふと現れた感覚を、急いで答えにはしません。でも、話したくなったときには安心して話せる場所があります。対話を通して、まだ言葉になっていなかったものが輪郭を持っていきます。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="fire">
+  <div class="fire-inner">
+    <div class="eyebrow">AROUND THE FIRE</div>
+    <h2>森でひらき、<br>火の前で言葉になる。</h2>
+    <p>向かい合って「さあ話しましょう」と言われると話せないことも、同じ火を見ていると、ぽつりと口から出てくることがあります。</p>
+    <p>これまでのこと。これからのこと。誰にも言ってこなかったこと。自分でも気づいていなかったこと。</p>
+    <p>話さなくてもいい。ただ、火のそばにいる。それもこの旅の大切な時間です。</p>
+  </div>
+</section>
+
+<section class="journey">
+  <div class="wrap">
+    <div class="journey-head">
+      <div class="eyebrow">THE 4-DAY JOURNEY</div>
+      <h2>4日間の旅。</h2>
+      <p>天候や自然の状態、その日の参加者のコンディションによって予定は変わります。決められた行程を消化するよりも、その日にしか出会えない屋久島を優先します。</p>
+    </div>
+    <div class="day">
+      <div class="day-label">DAY 1</div>
+      <div><h3>日常をほどく。</h3><p>屋久島に到着。島の空気に触れ、まずは日常の速度を落としていきます。この4日間をともに過ごす仲間と出会い、夜は最初の焚火へ。何かを始めるより先に、「ここへ来た自分」を火のそばに座らせます。</p></div>
+    </div>
+    <div class="day">
+      <div class="day-label">DAY 2</div>
+      <div><h3>五感をひらく。</h3><p>森へ、水へ。その日の屋久島と相談しながら、島の懐へ入っていきます。急ぐのではなく、立ち止まり、触れ、聴き、匂い、味わう。頭で理解する屋久島から、身体で感じる屋久島へ。</p><div class="note">森歩き / 水辺 / 自然体験などを予定</div></div>
+    </div>
+    <div class="day">
+      <div class="day-label">DAY 3</div>
+      <div><h3>自分と戯れる。</h3><p>もっと自然の中へ。「ただやってみたい」「なんだかわからないけど面白い」という感覚に従って過ごします。最後の夜は焚火を囲み、ここまでの人生、今心にあるもの、これから少し大切にしたいものを、言葉にしたい人だけ言葉にします。</p></div>
+    </div>
+    <div class="day">
+      <div class="day-label">DAY 4</div>
+      <div><h3>日常へ還る。</h3><p>最後の朝。何かを決意して帰る必要はありません。来たときの自分と、今ここにいる自分の違いを少しだけ感じてみる。そして、それぞれの日常へ。旅の続きを、暮らしの中へ持ち帰ります。</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="image-break">
+  <p>「変わる」ためではなく、<br>“自分である感覚”を<br>思い出すために。</p>
+</section>
+
+<section class="forwho">
+  <div class="wrap forwho-grid">
+    <div>
+      <div class="eyebrow">FOR YOU</div>
+      <h2>こんな人に、<br>来てほしい。</h2>
+    </div>
+    <div>
+      <ul>
+        <li>毎日はちゃんと回っている。でも、ときどき「このままでいいのかな」と思う</li>
+        <li>少し立ち止まって、自分の感覚を取り戻したい</li>
+        <li>自然の中にどっぷり浸かる時間がほしい</li>
+        <li>これからの人生を、頭だけではなく身体でも考えてみたい</li>
+        <li>誰かと深く話したい。でも、無理に自己開示する場は苦手</li>
+        <li>理由はうまく説明できないけれど、屋久島に惹かれている</li>
+      </ul>
+      <div class="forwho-foot">「屋久島に行ってみたい。」<br>その感覚も、十分な参加理由です。</div>
+    </div>
+  </div>
+</section>
+
+<section class="info" id="entry">
+  <div class="wrap">
+    <div class="eyebrow">INFORMATION</div>
+    <h2>旅の概要。</h2>
+    <div class="info-grid">
+      <div>
+        <dl>
+          <div class="info-row"><dt>日程</dt><dd>3泊4日 / 開催日は決定後に記載</dd></div>
+          <div class="info-row"><dt>場所</dt><dd>鹿児島県・屋久島</dd></div>
+          <div class="info-row"><dt>定員</dt><dd>少人数制 / 最大14名程度</dd></div>
+          <div class="info-row"><dt>最低催行</dt><dd>8名</dd></div>
+          <div class="info-row"><dt>宿泊</dt><dd>島内民宿を貸切予定</dd></div>
+          <div class="info-row"><dt>含まれるもの</dt><dd>宿泊費 / 4日間のガイド・アテンド / 現地レンタカー / リトリートプログラム</dd></div>
+          <div class="info-row"><dt>含まれないもの</dt><dd>屋久島までの往復交通費 / 食事代 / 個人的な費用</dd></div>
+        </dl>
+      </div>
+      <div>
+        <div class="price">98,000<small> 円 / 1名</small></div>
+        <p>自然と対話の両方を、急がず味わう4日間。観光ツアーでも、研修でもない、少人数のリトリートです。</p>
+        <div class="info-note">※正式な日程・集合場所・持ち物・キャンセルポリシー等は募集開始時にご案内します。</div>
+        <a href="https://docs.google.com/forms/d/e/1FAIpQLSevuFB7GlX-RDQaP26oPOv3tUL9Hv19JhIeLJSn_2qz4P6D3A/viewform"
+   class="btn light"
+   target="_blank"
+   rel="noopener noreferrer">
+  この旅に参加する <span class="arrow">→</span>
+</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="final">
+  <div class="wrap">
+    <div class="eyebrow" style="justify-content:center">BACK TO YOUR NATURE</div>
+    <h2>森へ。水へ。火へ。<br>そして、自分へ。</h2>
+    <div class="closing">人生には、考えれば考えるほど<br>わからなくなることがあります。<br><br>そんなときは、もっと考えるのではなく、<br>森へ行ってみる。</div>
+    <p>屋久島で人生の答えを見つける必要はありません。ただ、自分の感覚にもう一度触れて、「ああ、私はここにいるな」と思える。その感覚を持って、いつもの暮らしへ帰っていく旅です。</p>
+    <a href="#entry" class="btn">旅の概要を見る <span class="arrow">→</span></a>
+  </div>
+</section>
+
+<footer>
+  YAKUSHIMA 3 NIGHTS 4 DAYS RETREAT — Preview LP / Application URL & event date to be updated before publication.
+</footer>
+</body>
+</html>

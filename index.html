@@ -120,29 +120,39 @@ h2{
 .guide{
   background:var(--sand);
   padding:64px 58px 70px;
-  position:relative;
-  overflow:hidden;
-  isolation:isolate;
 }
 
-.guide::before{
-  content:"";
-  position:absolute;
-  inset:0;
+/* ささっちょ */
+.sasaccho-photo{
+  background-image:
+    linear-gradient(rgba(236,232,220,.80), rgba(236,232,220,.80)),
+    url("sasaccho.jpg");
   background-repeat:no-repeat;
   background-size:cover;
-  z-index:0;
-  pointer-events:none;
-}
-
-.sasaccho-photo::before{
-  background-image:url("sasaccho.jpg");
   background-position:center center;
 }
 
-.massan-photo::before{
-  background-image:url("massan.jpg");
+/* まっさん */
+.massan-photo{
+  background-image:
+    linear-gradient(rgba(236,232,220,.80), rgba(236,232,220,.80)),
+    url("massan.jpg");
+  background-repeat:no-repeat;
+  background-size:cover;
   background-position:left center;
+}
+
+/* スマホ表示 */
+@media(max-width:800px){
+  .sasaccho-photo{
+    background-size:auto 120%;
+    background-position:42% center;
+  }
+
+  .massan-photo{
+    background-size:auto 118%;
+    background-position:left 66%;
+  }
 }
 .guide + .guide{border-left:0}
 .guide-role{font-size:11px;letter-spacing:.2em;font-weight:600;margin-bottom:40px}

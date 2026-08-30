@@ -118,7 +118,31 @@ h2{
   border-top:1px solid rgba(22,33,28,.28);border-bottom:1px solid rgba(22,33,28,.28);
 }
 .guide{
-  background:var(--sand);padding:64px 58px 70px;
+  background:var(--sand);
+  padding:64px 58px 70px;
+  position:relative;
+  overflow:hidden;
+  isolation:isolate;
+}
+  .guide::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  background-repeat:no-repeat;
+  background-size:cover;
+  opacity:.09;
+  z-index:-1;
+  pointer-events:none;
+}
+
+.sasaccho-photo::before{
+  background-image:url("sasaccho.jpg");
+  background-position:right bottom;
+}
+
+.massan-photo::before{
+  background-image:url("massan.jpg");
+  background-position:left bottom;
 }
 .guide + .guide{border-left:0}
 .guide-role{font-size:11px;letter-spacing:.2em;font-weight:600;margin-bottom:40px}
@@ -290,7 +314,7 @@ footer{padding:32px 24px;text-align:center;font-size:10px;letter-spacing:.12em;o
       <p>この旅には、異なる領域を案内する二人のプロがいます。一人は屋久島の自然へ。もう一人は、自分の中にあるまだ言葉にならないものへ。</p>
     </div>
     <div class="guide-row">
-      <article class="guide">
+      <article class="guide sasaccho-photo">
         <div class="guide-role">GUIDE FOR NATURE</div>
         <h3>自然への案内人</h3>
         <article>笹川 健一</article>
@@ -298,7 +322,7 @@ footer{padding:32px 24px;text-align:center;font-size:10px;letter-spacing:.12em;o
         <p>屋久島に暮らし、森・山・川・海を案内してきたガイド。「人気の場所をただ訪れる」ことよりも、一人ひとりが自然とどう出会うかを大切にしています。立ち止まること、静かに感じること、予定通りにいかないことまで含めて、その人にしかない“やくしまじかん”をつくります。</p>
         <div class="guide-axis">感じる。気づく。味わう。<br>そして、自然と戯れる。</div>
       </article>
-      <article class="guide">
+      <article class="guide massan-photo">
         <div class="guide-role">GUIDE FOR INNER SELF</div>
         <h3>対話への案内人</h3>
         <article>山口真嗣</article>

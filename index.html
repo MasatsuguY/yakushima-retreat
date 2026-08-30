@@ -130,23 +130,31 @@ h2{
   inset:0;
   background-repeat:no-repeat;
   background-size:cover;
-  opacity:.12;
-  z-index:-1;
+  z-index:0;
   pointer-events:none;
+}
+.guide::after{
+  content:"";
+  position:absolute;
+  inset:0;
+  background:rgba(236,232,220,.82);
+  z-index:1;
+  pointer-events:none;
+}
+
+.guide > *{
+  position:relative;
+  z-index:2;
 }
 
 .sasaccho-photo::before{
   background-image:url("sasaccho.jpg");
-  background-position: 92% 45%;
-  background-size: 52% auto;
-  opacity: .16;
+  background-position:70% center;
 }
 
 .massan-photo::before{
   background-image:url("massan.jpg");
-  background-position: 8% 88%;
-  background-size: 72% auto;
-  opacity: .16;
+  background-position:32% 80%;
 }
 .guide + .guide{border-left:0}
 .guide-role{font-size:11px;letter-spacing:.2em;font-weight:600;margin-bottom:40px}

@@ -124,7 +124,8 @@ h2{
   overflow:hidden;
   isolation:isolate;
 }
-  .guide::before{
+
+.guide::before{
   content:"";
   position:absolute;
   inset:0;
@@ -133,11 +134,12 @@ h2{
   z-index:0;
   pointer-events:none;
 }
+
 .guide::after{
   content:"";
   position:absolute;
   inset:0;
-  background:rgba(236,232,220,.82);
+  background:rgba(236,232,220,.80);
   z-index:1;
   pointer-events:none;
 }
@@ -149,12 +151,12 @@ h2{
 
 .sasaccho-photo::before{
   background-image:url("sasaccho.jpg");
-  background-position:70% center;
+  background-position:82% 45%;
 }
 
 .massan-photo::before{
   background-image:url("massan.jpg");
-  background-position:32% 80%;
+  background-position:22% 88%;
 }
 .guide + .guide{border-left:0}
 .guide-role{font-size:11px;letter-spacing:.2em;font-weight:600;margin-bottom:40px}
